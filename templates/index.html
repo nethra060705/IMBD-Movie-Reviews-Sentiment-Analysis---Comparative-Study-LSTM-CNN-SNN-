@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Movie Sentiment Analyzer</title>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>SentimentAI</span>
+            </div>
+            <nav class="nav">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">AI-Powered</span>
+                        <br>Movie Sentiment Analysis
+                    </h1>
+                    <p class="hero-subtitle">
+                        Discover the emotional tone of movie reviews instantly using advanced deep learning technology
+                    </p>
+                </div>
+            </section>
+
+            <!-- Analysis Form -->
+            <section class="analysis-section">
+                <div class="form-container">
+                    <div class="form-header">
+                        <div class="form-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <h2>Analyze Movie Review</h2>
+                        <p>Enter a movie review below and our AI will predict its sentiment</p>
+                    </div>
+                    
+                    <form action="{{ url_for('predict') }}" method="post" class="analysis-form">
+                        <div class="input-group">
+                            <label for="review-input">Movie Review</label>
+                            <textarea 
+                                id="review-input"
+                                name="Enter the product review here" 
+                                placeholder="Type or paste your movie review here... For example: 'This movie was absolutely fantastic! The acting was superb and the plot kept me engaged throughout.'"
+                                required
+                                rows="4"
+                            ></textarea>
+                        </div>
+                        
+                        <button type="submit" class="predict-btn">
+                            <i class="fas fa-magic"></i>
+                            <span>Analyze Sentiment</span>
+                            <div class="btn-shine"></div>
+                        </button>
+                    </form>
+
+                    <!-- Results Section -->
+                    {% if prediction_text %}
+                    <div class="results-section">
+                        <div class="result-card">
+                            <div class="result-icon">
+                                {% if 'Positive' in prediction_text %}
+                                    <i class="fas fa-smile result-positive"></i>
+                                {% else %}
+                                    <i class="fas fa-frown result-negative"></i>
+                                {% endif %}
+                            </div>
+                            <div class="result-content">
+                                <h3>Analysis Result</h3>
+                                <p class="result-text">{{ prediction_text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="features-section">
+                <h2 class="section-title">Powered by Advanced AI</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Deep Learning</h3>
+                        <p>LSTM neural networks trained on 50,000+ movie reviews for accurate sentiment prediction</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Real-time Analysis</h3>
+                        <p>Get instant sentiment predictions with confidence scores in milliseconds</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>High Accuracy</h3>
+                        <p>87.97% accuracy rate on test data with advanced preprocessing and tokenization</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SentimentAI. Powered by TensorFlow & Deep Learning</p>
+        </div>
+    </footer>
+</body>
+</html>

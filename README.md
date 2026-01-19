@@ -1,5 +1,3 @@
-# IMBD-Movie-Reviews-Sentiment-Analysis---Comparative-Study-LSTM-CNN-SNN-
-Sentiment Analysis using Deep Neural Networks (LSTM, CNN, SNN) on IMDb movie reviews with 87.97% accuracy. Built with TensorFlow/Keras and deployed via Flask web app featuring real-time predictions and modern UI.  Resources
 # 🎬 IMDB Movie Reviews Sentiment Analysis - Comparative Study (LSTM, CNN, SNN)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
@@ -255,7 +253,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Nethra Arun**
+**Dhriti Reddy**
+- GitHub: [@dhriti-kourla](https://github.com/dhriti-kourla)
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/dhriti-kourla)
 
 ## 🙏 Acknowledgments
 
@@ -268,7 +268,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions, suggestions, or collaborations:
 - Open an issue on GitHub
-- Email: nethraarun06@gmail.com
+- Email: [Your Email]
 
 ---
 
