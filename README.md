@@ -255,9 +255,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Dhriti Reddy**
-- GitHub: [@dhriti-kourla](https://github.com/dhriti-kourla)
-- LinkedIn: [Connect with me](https://www.linkedin.com/in/dhriti-kourla)
+**Nethra Arun**
 
 ## 🙏 Acknowledgments
 
@@ -270,7 +268,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions, suggestions, or collaborations:
 - Open an issue on GitHub
-- Email: [Your Email]
+- Email: nethraarun06@gmail.com
 
 ---
 
